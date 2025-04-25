@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+:root{
+    /*modo claro*/
+    --bg-wt: #F7F7F7;
+    --text-wt: #1E1E1E;
+    --accent-wt: #5B6DFF;
+    --card-wt: #FFFFFF;
+    --border-wt: #E0E0E0;
+
+    /*modo escuro*/
+    --bg-bk: #1E1E2F;
+    --text-bk: #F1F1F1;
+    --accent-bk: #5B6DFF;
+    --card-bk: #2A2A40;
+    --border-bk: #3A3A5A;
+}

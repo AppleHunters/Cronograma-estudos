@@ -6,6 +6,8 @@
     <title>Cronôstudo</title>
     <link rel="stylesheet" href="style/mobile.css">
     <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
 </head>
 <body>
     <main>
@@ -13,8 +15,21 @@
             <aside class="content"> <!--conteúdo apenas, h2, p, input etc.-->
                 <h1>Bem-vindo(a)</h1>
                 <p>Bem-vindo(a) ao cronôstudo, por favor, faça login e acesse sua conta, se não tiver um login, acesse a opção cadastre-se.</p>
-                <input type="text" name="login" id="ilogin">
-                <input type="password" name="passwd" id="ipasswd">
+                <div>
+                    <label for="ilogin">
+                        <span class="material-symbols-outlined">person</span>
+                    </label>
+                    <input type="text" name="login" id="ilogin">
+                </div>
+                <div>
+                    <label for="ipasswd">
+                        <span class="material-symbols-outlined">vpn_key</span>
+                    </label>
+                    <div class="passwd">
+                        <input type="password" name="passwd" id="ipasswd">
+                        <span class="material-symbols-outlined visibilidade" onclick="visibility">Visibility</span>
+                    </div>
+                </div>
                 <button id="entrar">Entrar</button>
                 <button id="cadastro">Cadastre-se</button>
             </aside>
@@ -24,5 +39,6 @@
             </aside>
         </section>
     </main>
+    <script src="script/visibility.js"></script>
 </body>
 </html>
