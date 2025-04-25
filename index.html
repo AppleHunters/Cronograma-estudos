@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cronôstudo</title>
     <link rel="stylesheet" href="style/tela-login/mobile-login.css">
-    <link rel="stylesheet" href="style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
 </head>
@@ -19,18 +18,18 @@
                     <label for="ilogin">
                         <span class="material-symbols-outlined">person</span>
                     </label>
-                    <input type="text" name="login" id="ilogin">
+                    <input type="text" name="login" placeholder="Login" id="ilogin">
                 </div>
                 <div>
                     <label for="ipasswd">
                         <span class="material-symbols-outlined">vpn_key</span>
                     </label>
                     <div class="passwd">
-                        <input type="password" name="passwd" id="ipasswd">
+                        <input type="password" name="passwd" placeholder="Senha" id="ipasswd">
                         <span class="material-symbols-outlined visibility" onclick="visibility()">visibility</span>                        
                     </div>
                 </div>
-                <button id="entrar">Entrar</button>
+                <button id="entrar" onclick="entrar()">Entrar</button>
                 <button id="cadastro">Cadastre-se</button>
             </aside>
             <aside class="img">
@@ -40,5 +39,6 @@
         </section>
     </main>
     <script src="script/estilo-passwd.js"></script>
+    <script src="script/login.js"></script>
 </body>
 </html>

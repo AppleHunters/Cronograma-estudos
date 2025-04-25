@@ -132,6 +132,11 @@ button{
     border: 1px solid var(--accent-bk);
 }
 
+button:hover{
+    cursor: pointer;
+    background-color: var(--card-bk);
+}
+
 button:active{
     background-color: var(--accent-bk);
 
@@ -164,4 +169,26 @@ aside.img img {
     80%  { transform: translateX(-80%); }  /* Imagem 5 */
     95%  { transform: translateX(-80%); }  /* Pausa */
     100% { transform: translateX(0%); }    /* Volta suave para a Imagem 1 */
+}
+
+@media screen and (min-width: 1000px) {
+    section.login{
+        color: white;
+        background-color: var(--card-bk);
+        width: 950px;
+        border-radius: 5px;
+    
+    
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    section.login{
+        color: white;
+        background-color: var(--card-bk);
+        width: 75%;
+        border-radius: 5px;
+        max-width: 400px;
+    }
 }
