@@ -33,28 +33,32 @@ function entrar() {
                 if(!(password == emilly.password)){
                     window.alert('senha incorreta')
                 } else {
-                    window.alert('gg')
+                    window.location.href = 'html/pag001.html'
+                    sessionStorage.getItem('user', 'Emilly')
                 }
                 break
             case isa.login:
                 if(!(password == isa.password)){
                     window.alert('senha incorreta')
                 } else {
-                    window.alert('gg')
+                    window.location.href = 'html/pag001.html'
+                    sessionStorage.getItem('user', 'Isabelli')
                 }
                 break
             case manu.login:
                 if(!(password == manu.password)){
                     window.alert('senha incorreta')
                 } else {
-                    window.alert('gg')
+                    window.location.href = 'html/pag001.html'
+                    sessionStorage.getItem('user', 'Emanuelle')
                 }
                 break
             case sigmadabaia.login:
                 if(!(password == sigmadabaia.password)){
                     window.alert('senha incorreta nigga')
                 } else {
-                    window.alert('gg')
+                    window.location.href = 'html/pag001.html'
+                    sessionStorage.getItem('user', 'FatNiggaBoy')
                 }
                 break
         }
