@@ -85,6 +85,11 @@ div input:focus{
     background-color: var(--accent-bk);
     color: white;
     border: 1px solid var(--border-bk);
+    outline: none;
+}
+
+#ilogin{
+    padding-left: 7px;
 }
 
 div > input:focus .material-symbols-outlined{
@@ -98,6 +103,15 @@ div.passwd{
     margin-left: 5px;
 }
 
+.passwd.focado {
+    background-color: var(--accent-bk);
+}
+
+.passwd.focado .visibility {
+    color: white;
+}
+
+
 #ipasswd{
     border: none;
     width: 100%;
@@ -107,6 +121,7 @@ div.passwd{
 
 div.passwd .material-symbols-outlined{
     color: black;
+    cursor: pointer;
 }
 
 button{
