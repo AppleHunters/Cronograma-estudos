@@ -14,4 +14,12 @@
     --accent-bk: #5B6DFF;
     --card-bk: #2A2A40;
     --border-bk: #3A3A5A;
+
+    --port: rgb(228, 80, 26);
+    --mat:  rgb(0, 119, 255);
+    --cien: rgb(25, 151, 0);
+    --hist: rgb(119, 0, 255);
+    --geo:  rgb(163, 35, 12);
+    --ing:  rgb(255, 187, 0);
+    --reda: rgb(128, 0, 32);
 }

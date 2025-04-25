@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+*{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+
+body{
+    background-color: #1E1E2F;
+    color: #F1F1F1;
+}
+
+#global{
+    display: flex;
+    padding: 10px;
+    background-color: #3A3A5A;
+}
+
+#global h1{
+    margin: auto;
+    text-align: center;
+}
+
+#global span{
+    font-size: 40px;
+}
+
+main p{
+    padding: 10px;
+    text-align: center;
+    
+}
+
+main aside.p{
+    background-color: rgb(228, 80, 26);
+   margin:  60px 60px ;
+   border-radius: 10px;
+   height: 65px;
+   box-shadow: 0px 0px 20px 5px rgb(255, 90, 30);
+}
+
+main aside.p > p{
+    transform: translateY(12px);
+}
+
+main aside.m{
+    background-color: rgb(0, 119, 255);
+   margin:  60px 60px ;
+   border-radius: 10px;
+   height: 65px;
+   box-shadow: 0px 0px 20px 5px rgb(30, 109, 255);
+}
+
+main aside.m > p{
+    transform: translateY(12px);
+}
+
+
+main aside.c{
+    background-color: rgb(25, 151, 0);
+   margin:  60px 60px ;
+   border-radius: 10px;
+   height: 65px;
+   box-shadow: 0px 0px 20px 5px rgb(50, 177, 0);
+}
+
+main aside.c > p{
+    transform: translateY(12px);
+}
+
+
+main aside.h{
+    background-color: rgb(119, 0, 255);
+   margin:  60px 60px ;
+   border-radius: 10px;
+   height: 65px;
+   box-shadow: 0px 0px 20px 5px rgb(140, 0, 255);
+}
+
+main aside.h > p{
+    transform: translateY(12px);
+}
+
+
+main aside.g{
+    background-color: rgb(163, 35, 12);
+   margin:  60px 60px ;
+   border-radius: 10px;
+   height: 65px;
+   box-shadow: 0px 0px 20px 5px rgb(172, 58, 38);
+}
+
+main aside.g > p{
+    transform: translateY(12px);
+}
+
+
+main aside.i{
+    background-color: rgb(255, 187, 0);
+   margin:  60px 60px ;
+   border-radius: 10px;
+   height: 65px;
+   box-shadow: 0px 0px 20px 5px rgb(255, 238, 0);
+}
+
+main aside.i > p{
+    transform: translateY(12px);
+}
+
+
+main aside.r{
+    background-color: rgb(128, 0, 32);
+   margin:  60px 60px ;
+   border-radius: 10px;
+   height: 65px;
+   box-shadow: 0px 0px 20px 5px rgb(184, 1, 46);
+}
+
+main aside.r > p{
+    transform: translateY(12px);
+}
