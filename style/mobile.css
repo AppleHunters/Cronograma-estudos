@@ -25,6 +25,7 @@
 body{
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 main{
@@ -48,29 +49,28 @@ aside.content{
     text-align: center;
 }
 
-aside.img img{
+
+
+aside.img img {
     width: 500%;
-animation: img-animation 20s steps(5);
-
-
-
+    animation: img-slide 50s ease-in-out forwards;
 }
 
-@keyframes img-animation{
-    0%{
+@keyframes img-slide {
+    0% {
         transform: translateX(0%);
     }
-    25%{
+    20% {
         transform: translateX(-100%);
     }
-    50%{
+    40% {
         transform: translateX(-200%);
     }
-    75%{
+    60% {
         transform: translateX(-300%);
     }
-    100%{
+    80%,
+    100% {
         transform: translateX(-400%);
     }
 }
-
