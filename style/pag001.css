@@ -1,5 +1,29 @@
 @charset "UTF-8";
 
+:root{
+    /*modo claro*/
+    --bg-wt: #F7F7F7;
+    --text-wt: #1E1E1E;
+    --accent-wt: #5B6DFF;
+    --card-wt: #FFFFFF;
+    --border-wt: #E0E0E0;
+
+    /*modo escuro*/
+    --bg-bk: #1E1E2F;
+    --text-bk: #F1F1F1;
+    --accent-bk: #5B6DFF;
+    --card-bk: #2A2A40;
+    --border-bk: #3A3A5A;
+
+    --port: rgb(228, 80, 26);
+    --mat:  rgb(0, 119, 255);
+    --cien: rgb(25, 151, 0);
+    --hist: rgb(119, 0, 255);
+    --geo:  rgb(163, 35, 12);
+    --ing:  rgb(255, 187, 0);
+    --reda: rgb(128, 0, 32);
+}
+
 *{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 0px;
@@ -34,7 +58,7 @@ main p{
 }
 
 main aside.p{
-    background-color: rgb(228, 80, 26);
+    background-color: var(--card-bk);
    margin:  60px 60px ;
    border-radius: 10px;
    height: 65px;
@@ -46,7 +70,7 @@ main aside.p > p{
 }
 
 main aside.m{
-    background-color: rgb(0, 119, 255);
+    background-color: var(--card-bk);
    margin:  60px 60px ;
    border-radius: 10px;
    height: 65px;
@@ -59,7 +83,7 @@ main aside.m > p{
 
 
 main aside.c{
-    background-color: rgb(25, 151, 0);
+    background-color: var(--card-bk);
    margin:  60px 60px ;
    border-radius: 10px;
    height: 65px;
@@ -72,7 +96,7 @@ main aside.c > p{
 
 
 main aside.h{
-    background-color: rgb(119, 0, 255);
+    background-color: var(--card-bk);
    margin:  60px 60px ;
    border-radius: 10px;
    height: 65px;
@@ -85,11 +109,11 @@ main aside.h > p{
 
 
 main aside.g{
-    background-color: rgb(163, 35, 12);
-   margin:  60px 60px ;
-   border-radius: 10px;
-   height: 65px;
-   box-shadow: 0px 0px 20px 5px rgb(172, 58, 38);
+    background-color: var(--card-bk);
+    margin:  60px 60px ;
+    border-radius: 10px;
+    height: 65px;
+    box-shadow: 0px 0px 20px 5px rgb(172, 58, 38);
 }
 
 main aside.g > p{
@@ -98,7 +122,7 @@ main aside.g > p{
 
 
 main aside.i{
-    background-color: rgb(255, 187, 0);
+    background-color: var(--card-bk);
    margin:  60px 60px ;
    border-radius: 10px;
    height: 65px;
@@ -111,7 +135,7 @@ main aside.i > p{
 
 
 main aside.r{
-    background-color: rgb(128, 0, 32);
+    background-color: var(--card-bk);
    margin:  60px 60px ;
    border-radius: 10px;
    height: 65px;
