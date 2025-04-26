@@ -113,7 +113,7 @@ main aside.g{
     margin:  60px 60px ;
     border-radius: 10px;
     height: 65px;
-    box-shadow: 0px 0px 20px 5px rgb(172, 58, 38);
+   box-shadow: 0px 0px 20px 5px rgb(172, 58, 38);
 }
 
 main aside.g > p{
