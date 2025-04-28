@@ -15,7 +15,7 @@
     --card-bk: #2A2A40;
     --border-bk: #3A3A5A;
 
-    --port: rgb(228, 80, 26);
+    --port: rgb(234, 70, 10);
     --mat:  rgb(0, 119, 255);
     --cien: rgb(25, 151, 0);
     --hist: rgb(119, 0, 255);
@@ -25,123 +25,90 @@
 }
 
 *{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    overflow-y: hidden;
 }
 
 body{
-    background-color: #1E1E2F;
-    color: #F1F1F1;
+    background-color: var(--bg-bk);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#global{
+header{
     display: flex;
-    padding: 10px;
-    background-color: #3A3A5A;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5px;
+    background-color: var(--card-bk);
+    color: white;
+}
+header .material-symbols-outlined{
+    font-size: 2.5em;
+    cursor: pointer;
 }
 
-#global h1{
-    margin: auto;
+header .gamb{
+    color: transparent;
+    cursor: default;
+}
+
+main{
+    background-color: var(--bg-bk);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+aside{
+    width: 75%;
+    margin-top: 50px;
+    height: 75px;
+    background-color: var(--card-bk);
     text-align: center;
-}
-
-#global span{
-    font-size: 40px;
-}
-
-main p{
-    padding: 10px;
-    text-align: center;
-    
-}
-
-main aside.p{
-    background-color: var(--card-bk);
-   margin:  60px 60px ;
-   border-radius: 10px;
-   height: 65px;
-   box-shadow: 0px 0px 20px 5px rgb(228, 80, 26);
-}
-
-main aside.p > p{
-    transform: translateY(12px);
-}
-
-main aside.m{
-    background-color: var(--card-bk);
-   margin:  60px 60px ;
-   border-radius: 10px;
-   height: 65px;
-   box-shadow: 0px 0px 20px 5px rgb(0, 119, 255);
-}
-
-main aside.m > p{
-    transform: translateY(12px);
-}
-
-
-main aside.c{
-    background-color: var(--card-bk);
-   margin:  60px 60px ;
-   border-radius: 10px;
-   height: 65px;
-   box-shadow: 0px 0px 20px 5px rgb(25, 151, 0);
-}
-
-main aside.c > p{
-    transform: translateY(12px);
-}
-
-
-main aside.h{
-    background-color: var(--card-bk);
-   margin:  60px 60px ;
-   border-radius: 10px;
-   height: 65px;
-   box-shadow: 0px 0px 20px 5px rgb(119, 0, 255);
-}
-
-main aside.h > p{
-    transform: translateY(12px);
-}
-
-
-main aside.g{
-    background-color: var(--card-bk);
-    margin:  60px 60px ;
+    color: white;
     border-radius: 10px;
-    height: 65px;
-   box-shadow: 0px 0px 20px 5px rgb(172, 58, 38);
-}
-
-main aside.g > p{
-    transform: translateY(12px);
-}
+    cursor: pointer;
 
 
-main aside.i{
-    background-color: var(--card-bk);
-   margin:  60px 60px ;
-   border-radius: 10px;
-   height: 65px;
-   box-shadow: 0px 0px 20px 5px rgb(255, 187, 0);
-}
-
-main aside.i > p{
-    transform: translateY(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-main aside.r{
-    background-color: var(--card-bk);
-   margin:  60px 60px ;
-   border-radius: 10px;
-   height: 65px;
-   box-shadow: 0px 0px 20px 5px rgb(134, 1, 34);
+
+aside.pt{
+    box-shadow: 0px 0px 20px 5px var(--port);
+    border: 1px solid var(--port);
 }
 
-main aside.r > p{
-    transform: translateY(12px);
+aside.mt{
+    box-shadow: 0px 0px 20px 5px var(--mat);
+    border: 1px solid var(--mat);
+}
+
+aside.ci{
+    box-shadow: 0px 0px 20px 5px var(--cien);
+    border: 1px solid var(--cien);
+}
+
+aside.ht{
+    box-shadow: 0px 0px 20px 5px var(--hist);
+    border: 1px solid var(--hist);
+}
+
+aside.ge{
+    box-shadow: 0px 0px 20px 5px var(--geo);
+    border: 1px solid var(--geo);
+}
+
+aside.in{
+    box-shadow: 0px 0px 20px 5px var(--ing);
+    border: 1px solid var(--ing);
+}
+
+aside.re{
+    box-shadow: 0px 0px 20px 5px var(--reda);
+    border: 1px solid var(--reda);
 }

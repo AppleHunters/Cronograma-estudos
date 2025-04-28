@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tratado de Versalhes</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: white;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .slide {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 800px;
+      text-align: center;
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    .highlight {
+      color: #f1c40f;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>Tratado de Versalhes</h1>
+    <p>Assinado em <span class="highlight">28 de junho de 1919</span>, o Tratado de Versalhes marcou o fim da <span class="highlight">Primeira Guerra Mundial</span>.</p>
+    <p>O tratado impôs duras condições à <span class="highlight">Alemanha</span>, incluindo perdas territoriais, limitações militares e grandes indenizações.</p>
+    <p>Foi um dos fatores que contribuiu para o surgimento da <span class="highlight">Segunda Guerra Mundial</span>.</p>
+  </div>
+</body>
+</html>
