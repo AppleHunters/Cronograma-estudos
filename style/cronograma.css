@@ -1,0 +1,83 @@
+@charset "UFT-8";
+
+:root{
+    /*modo claro*/
+    --bg-wt: #F7F7F7;
+    --text-wt: #1E1E1E;
+    --accent-wt: #5B6DFF;
+    --card-wt: #FFFFFF;
+    --border-wt: #E0E0E0;
+
+    /*modo escuro*/
+    --bg-bk: #1E1E2F;
+    --text-bk: #F1F1F1;
+    --accent-bk: #5B6DFF;
+    --card-bk: #2A2A40;
+    --border-bk: #3A3A5A;
+
+    --port: rgb(228, 80, 26);
+    --mat:  rgb(0, 119, 255);
+    --cien: rgb(25, 151, 0);
+    --hist: rgb(119, 0, 255);
+    --geo:  rgb(163, 35, 12);
+    --ing:  rgb(255, 187, 0);
+    --reda: rgb(128, 0, 32);
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+body{
+    background-color: var(--bg-bk);
+}
+
+.header{ /*Parte do menu*/
+    background-color: var(--bg-bk);
+    display: flex;
+    font-size: 20px;
+    height: 130px;
+    text-align: center;
+}
+
+.header > h1{
+    font-size: 35px;
+    color: var(--text-bk);
+    margin: auto;
+}
+
+.header > span{
+    color: #5B6DFF;
+    font-size: 45px;
+    margin: auto;
+}
+
+header{
+    background-color: var(--border-bk);
+    height: 300px;
+    color: var(--text-bk);
+}
+
+header h1 {
+    text-align: center;
+    padding: 30px; /* Afastar todos os lados */
+}
+
+
+header p{
+    text-align: center;
+    color: var(--text-bk);
+}
+
+.btn{ /*Botão que vai levar para a pagina inicial*/
+   margin: 20px 20px;
+   border-radius: 10px;
+   background-color: var(--accent-bk);
+   box-shadow: 2px 2px 5px 5px var(--accent-bk);
+   width: 400px;
+   height: 50px;
+   font-size: 20px;
+   color: var(--text-bk);
+}
