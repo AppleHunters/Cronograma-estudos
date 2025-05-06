@@ -42,6 +42,7 @@ header{
     padding: 15px 5px;
     background-color: var(--card-bk);
     color: white;
+   
 }
 header .material-symbols-outlined{
     font-size: 2.5em;
@@ -58,6 +59,7 @@ main{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+  
 }
 
 aside{
@@ -111,4 +113,93 @@ aside.in{
 aside.re{
     box-shadow: 0px 0px 20px 5px var(--reda);
     border: 1px solid var(--reda);
+    
+}
+
+aside a{
+    text-decoration: none;
+    color: var(--text-bk);
+}
+
+aside.pt a p {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 2px solid var(--port); 
+    background-color: transparent;
+    color: inherit;
+    font-weight: bold;
+    transition: 0.3s;
+    display: none;
+}
+
+aside.mt a p {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 2px solid var(--mat); 
+    background-color: transparent;
+    color: inherit;
+    font-weight: bold;
+    transition: 0.3s;
+    display: none;
+}
+
+aside.ci a p {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 2px solid var(--cien); 
+    background-color: transparent;
+    color: inherit;
+    font-weight: bold;
+    transition: 0.3s;
+    display: none;
+}
+
+aside.ht a p {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 2px solid var(--hist); 
+    background-color: transparent;
+    color: inherit;
+    font-weight: bold;
+    transition: 0.3s;
+    display: none;
+}
+
+aside.ge a p {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 2px solid var(--geo); 
+    background-color: transparent;
+    color: inherit;
+    font-weight: bold;
+    transition: 0.3s;
+    display: none;
+}
+
+aside.in a p {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 2px solid var(--ing); 
+    background-color: transparent;
+    color: inherit;
+    font-weight: bold;
+    transition: 0.3s;
+    display: none;
+}
+
+aside {
+    width: 75%;
+    margin-top: 50px;
+    height: auto; /* permite que o conteúdo cresça */
+    background-color: var(--card-bk);
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: column; /* empilha conteúdo verticalmente */
+    align-items: center;
+    gap: 10px; /* espaço entre os elementos */
 }
