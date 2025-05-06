@@ -68,12 +68,30 @@ header h1 {
 
 header a{
     text-decoration: none;
+    display: flex;
+
 }
 
 header p{
     text-align: center;
     color: var(--text-bk);
 }
+
+.btn {
+    margin: 20px auto; /* centraliza horizontalmente */
+    border-radius: 10px;
+    background-color: var(--accent-bk);
+    box-shadow: 2px 2px 5px 5px var(--accent-bk);
+    width: 100%;
+    max-width: 400px; /* limita a largura máxima */
+    height: 50px;
+    font-size: 20px;
+    color: var(--text-bk);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
 
 .btn{ /*Botão que vai levar para a pagina inicial*/
    margin: 20px 20px;
