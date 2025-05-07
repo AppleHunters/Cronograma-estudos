@@ -1,14 +1,14 @@
 @charset "UFT-8";
 
-:root{
-    /*modo claro*/
+:root {
+    /* Modo claro */
     --bg-wt: #F7F7F7;
     --text-wt: #1E1E1E;
     --accent-wt: #5B6DFF;
     --card-wt: #FFFFFF;
     --border-wt: #E0E0E0;
 
-    /*modo escuro*/
+    /* Modo escuro */
     --bg-bk: #1E1E2F;
     --text-bk: #F1F1F1;
     --accent-bk: #5B6DFF;
@@ -24,93 +24,123 @@
     --reda: rgb(128, 0, 32);
 }
 
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
-    margin: auto;
+    margin: 0;
+    padding: 0;
 }
 
-body{
+body {
     background-color: var(--bg-bk);
-    overflow-y: hidden;
 }
 
-.header{ /*Parte do menu*/
+.header {
     background-color: var(--bg-bk);
     display: flex;
     font-size: 20px;
     height: 130px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
-.header > h1{
+.header > h1 {
     font-size: 35px;
     color: var(--text-bk);
-    margin: auto;
 }
 
-.header > span{
+.header > span {
     color: #5B6DFF;
     font-size: 45px;
-    margin: auto;
+    margin-right: 10px;
 }
 
-header{
+header {
     background-color: var(--border-bk);
     height: 300px;
     color: var(--text-bk);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header h1 {
-    text-align: center;
-    padding: 30px; /* Afastar todos os lados */
+    padding: 20px;
 }
 
-header a{
-    text-decoration: none;
-    display: flex;
-
-}
-
-header p{
-    text-align: center;
+header p {
     color: var(--text-bk);
 }
 
+header a {
+    text-decoration: none; /* Removido o sublinhado do link */
+}
+
 .btn {
-    margin: 20px auto; /* centraliza horizontalmente */
     border-radius: 10px;
     background-color: var(--accent-bk);
     box-shadow: 2px 2px 5px 5px var(--accent-bk);
-    width: 100%;
-    max-width: 400px; /* limita a largura máxima */
-    height: 50px;
-    font-size: 20px;
+    width: 10em;            /* Ocupa 60% da largura disponível */
+    max-width: 800px;      /* Cresce até 800px no máximo */
+    height: 70px;          /* Altura fixa */
+    font-size: 24px;       /* Tamanho da fonte aumentado */
     color: var(--text-bk);
     display: flex;
     justify-content: center;
     align-items: center;
- }
- 
-
-.btn{ /*Botão que vai levar para a pagina inicial*/
-   margin: 20px 20px;
-   border-radius: 10px;
-   background-color: var(--accent-bk);
-   box-shadow: 2px 2px 5px 5px var(--accent-bk);
-   width: 400px;
-   height: 50px;
-   font-size: 20px;
-   color: var(--text-bk);
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    margin: 20px auto;
+    text-decoration: none; /* Remove o sublinhado no botão também */
 }
+
+@media screen and (min-width: 768px) {
+
+    header h1{
+        font-size: 2.6em;
+    }
+    
+    header p{
+        font-size: 1.5em;
+    }
+
+    .btn {
+        width: 30em; /* Aumenta para 70% em telas maiores */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .btn {
+        width: 45em; /* Aumenta para 45em em telas grandes */
+        transition: all 0.3s ease; /* Suaviza a transição */
+    }
+
+    .btn:hover {
+        width: 60em; /* Aumenta um pouco mais ao passar o mouse */
+       
+        box-shadow: 0px 0px 20px 5px rgba(91, 109, 255, 0.5); /* Sombra mais evidente */
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .btn {
+        width: 65em; /* Aumenta para 65em em telas muito grandes */
+        transition: all 0.3s ease; /* Suaviza a transição */
+    }
+
+    .btn:hover {
+        width: 80em; /* Aumenta ainda mais ao passar o mouse */ 
+        height: 4em;
+        box-shadow: 0px 0px 25px 7px rgba(91, 109, 255, 0.5); /* Sombra mais evidente */
+    }
+}
+
 
 .cronograma {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed; /* Impede que a tabela ultrapasse a largura da tela */
+    table-layout: fixed;
     margin-top: 30px;
 }
 
@@ -120,9 +150,9 @@ header p{
     padding: 12px;
     color: var(--text-bk);
     text-align: center;
-    word-wrap: break-word;  /* Quebra o texto dentro da célula */
-    white-space: normal;    /* Permite várias linhas de texto */
-    min-height: 60px;       /* Altura mínima das células */
+    word-wrap: break-word;
+    white-space: normal;
+    min-height: 60px;
     font-size: 16px;
 }
 
@@ -131,7 +161,7 @@ header p{
     color: white;
 }
 
-footer{
+footer {
     background-color: var(--border-bk);
     height: 1.6em;
     text-align: center;
@@ -140,7 +170,7 @@ footer{
     overflow-y: auto;
 }
 
-footer a{
+footer a {
     text-decoration: none;
     color: #5B6DFF;
 }
