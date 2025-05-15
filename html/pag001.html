@@ -2,62 +2,69 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Pagina 001</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=settings" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crônostudo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="/style/pag001.css">
 </head>
 <body>
     <header>
-        <span class="material-symbols-outlined eng">settings</span>
+        <span class="material-symbols-outlined eng" id="settings">settings</span>
         <h1>Crônostudo</h1>
-        <!--Img Bacana-->
         <span class="material-symbols-outlined gamb">settings</span>
     </header>
+
+    <nav id="menu" class="menu-hidden">
+        <ul>
+            <li><a href="port.html">Português</a></li>
+            <li><a href="mat.html">Matemática</a></li>
+            <li><a href="cie.html">Ciências</a></li>
+            <li><a href="his.html">História</a></li>
+            <li><a href="geo.html">Geografia</a></li>
+            <li><a href="ing.html">Inglês</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <aside class="pt" onclick="clicou()">
-                <h2>Português</h2>
-            <a href="port.html" >
+        <!-- Seus asides continuam aqui -->
+        <aside class="pt">
+            <h2>Português</h2>
+            <a href="port.html">
                 <p>Começar!</p>
             </a>
         </aside>
-        <aside class="mt" onclick="clicou()"> 
-                <h2>Matemática</h2>
-                <a href="mat.html" >
-                    <p>Começar!</p>
-                </a>
-           
-        </aside>
-        <aside class="ci" onclick="clicou()">
-                <h2>Ciências</h2>
-           <a href="cie.html" > 
-             <p>Começar!</p>
-           </a>
-        </aside>
-        <aside class="ht" onclick="clicou()">
-                <h2>História</h2>
-              <a href="his.html" >
-                <p>Começar!</p>
-              </a>
-        </aside>
-        <aside class="ge" onclick="clicou()">
-                <h2>Geografia</h2>
-            <a href="geo.html" >
+        <aside class="mt">
+            <h2>Matemática</h2>
+            <a href="mat.html">
                 <p>Começar!</p>
             </a>
         </aside>
-        <aside class="in" onclick="clicou()">
-                <h2>inglês</h2>
-            <a href="ing.html" >
+        <aside class="ci">
+            <h2>Ciências</h2>
+            <a href="cie.html">
+                <p>Começar!</p>
+            </a>
+        </aside>
+        <aside class="ht">
+            <h2>História</h2>
+            <a href="his.html">
+                <p>Começar!</p>
+            </a>
+        </aside>
+        <aside class="ge">
+            <h2>Geografia</h2>
+            <a href="geo.html">
+                <p>Começar!</p>
+            </a>
+        </aside>
+        <aside class="in">
+            <h2>Inglês</h2>
+            <a href="ing.html">
                 <p>Começar!</p>
             </a>
         </aside>
     </main>
-    <script>
-            const user = sessionStorage.getItem('user')
-            
-    </script>
+
     <script src="/script/cro.js"></script>
 </body>
 </html>

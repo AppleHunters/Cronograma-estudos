@@ -184,3 +184,9 @@ footer a {
     text-decoration: none;
     color: #5B6DFF;
 }
+
+a{
+    color: var(--text-bk);
+    text-decoration: solid;
+}
+

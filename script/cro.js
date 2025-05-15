@@ -24,3 +24,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const settingsButton = document.getElementById("settings");
+    const menu = document.getElementById("menu");
+
+    settingsButton.addEventListener("click", () => {
+        menu.classList.toggle("menu-hidden");
+        menu.classList.toggle("menu-visible");
+        settingsButton.classList.toggle("rotated");
+    });
+});

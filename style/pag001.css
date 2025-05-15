@@ -203,3 +203,162 @@ aside {
     align-items: center;
     gap: 10px; /* espaço entre os elementos */
 }
+
+   body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #1E1E2F;
+        color: white;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background-color: #2A2A40;
+    }
+    
+    #settings {
+        font-size: 2.5em;
+        cursor: pointer;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav li {
+        margin: 10px 0;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2em;
+    }
+
+    #menu {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #2A2A40;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1E1E2F;
+    color: white;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #2A2A40;
+}
+
+#settings {
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+#menu li {
+    margin: 15px 0;
+}
+
+#menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+}
+
+.menu-hidden {
+    transform: translateX(100%);
+}
+
+.menu-visible {
+    transform: translateX(0);
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0; /* Mudado para o lado esquerdo */
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+}
+
+.menu-hidden {
+    transform: translateX(-100%);
+}
+
+.menu-visible {
+    transform: translateX(0);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #2A2A40;
+    position: relative;
+    z-index: 1100; /* Coloca acima do menu */
+}
+
+#settings {
+    font-size: 2.5em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+#menu {
+    position: fixed;
+    top: 50px; /* ajusta aqui para descer o menu */
+    left: 0;
+    width: 50%;
+    height: calc(100% - 50px); /* diminui a altura para caber na tela */
+    background-color: white;
+    color: black;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+}
