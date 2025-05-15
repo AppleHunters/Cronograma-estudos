@@ -356,9 +356,15 @@ header {
     left: 0;
     width: 50%;
     height: calc(100% - 50px); /* diminui a altura para caber na tela */
-    background-color: white;
-    color: black;
+    background-color: var(--bg-bk);
+    color: white;
     z-index: 1000;
     transition: transform 0.3s ease;
     overflow-y: auto;
+}
+
+#menu {
+    text-decoration: none;
+    color: var(--text-bk); /* Alterado para branco */
+    font-size: 1.5em;
 }
