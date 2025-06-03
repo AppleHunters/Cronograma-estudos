@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crônostudo</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <link rel="stylesheet" href="/style/pag001.css">
+    <link rel="stylesheet" href="../style/pag001.css">
+    
 </head>
 <body>
     <header>
@@ -16,14 +17,13 @@
 
     <nav id="menu" class="menu-hidden">
         <ul>
-            <li>Português</li> 
-            <li>Matemática</li>
-            <li>Ciências</li>
-            <li>História</li>
-            <li>Geografia</li>
-            <li>Inglês</li>
+            <li>Tema Claro: <svg id="tema-claro" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-toggle-left-icon lucide-toggle-left" onclick="te"><circle cx="9" cy="12" r="3"/><rect width="20" height="14" x="2" y="5" rx="7"/></svg>
+            <svg id="tema-escuro" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide c" id="hidden" onclick="tc"><circle cx="15" cy="12" r="3"/><rect width="20" height="14" x="2" y="5" rx="7"/></svg>
+            </li>
+          
         </ul>
     </nav>
+
 
     <main>
         <!-- Seus asides continuam aqui -->
@@ -65,6 +65,7 @@
         </aside>
     </main>
 
-    <script src="/script/cro.js"></script>
+   <script src="../script/cro.js"></script>
+
 </body>
 </html>

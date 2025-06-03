@@ -35,3 +35,44 @@ document.addEventListener('DOMContentLoaded', function () {
         settingsButton.classList.toggle("rotated");
     });
 });
+
+// Elementos do DOM
+const temaClaroBtn = document.getElementById("tema-claro");
+const temaEscuroBtn = document.getElementById("tema-escuro");
+
+// Função para alternar tema
+function toggleTema() {
+  const temaAtual = document.documentElement.getAttribute("data-theme");
+  const novoTema = temaAtual === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", novoTema);
+  localStorage.setItem("theme", novoTema);
+
+  // Alterna exibição dos ícones
+  if (novoTema === "dark") {
+    temaClaroBtn.style.display = "none";
+    temaEscuroBtn.style.display = "inline";
+  } else {
+    temaClaroBtn.style.display = "inline";
+    temaEscuroBtn.style.display = "none";
+  }
+}
+
+// Detecta tema salvo ou do sistema
+window.addEventListener("DOMContentLoaded", () => {
+  const temaSalvo = localStorage.getItem("theme");
+  const temaPreferido = temaSalvo || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  document.documentElement.setAttribute("data-theme", temaPreferido);
+
+  // Ajusta exibição dos ícones
+  if (temaPreferido === "dark") {
+    temaClaroBtn.style.display = "none";
+    temaEscuroBtn.style.display = "inline";
+  } else {
+    temaClaroBtn.style.display = "inline";
+    temaEscuroBtn.style.display = "none";
+  }
+});
+
+// Adiciona eventos de clique
+temaClaroBtn.addEventListener("click", toggleTema);
+temaEscuroBtn.addEventListener("click", toggleTema);

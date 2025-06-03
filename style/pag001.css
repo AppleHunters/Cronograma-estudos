@@ -368,3 +368,19 @@ header {
     color: var(--text-bk); /* Alterado para branco */
     font-size: 1.5em;
 }
+
+/* Defina o tamanho dos ícones */
+#tema-claro, #tema-escuro {
+  width: 52px; /* ou outro tamanho */
+  height: 52px;
+  cursor: pointer; 
+  color: #fff; /* cor, se quiser mudar! */
+  transform: translate(30px, 16px); 
+}
+
+#tema-claro:hover, #tema-escuro:hover {
+  transform: scale(1.0);
+  transition: transform 0.2s ease-in-out;
+  transform: translate(27px, 1px); 
+}
+
