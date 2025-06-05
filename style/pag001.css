@@ -1,286 +1,113 @@
 @charset "UTF-8";
 
-:root{
-    /*modo claro*/
-    --bg-wt: #F7F7F7;
-    --text-wt: #1E1E1E;
-    --accent-wt: #5B6DFF;
-    --card-wt: #FFFFFF;
-    --border-wt: #E0E0E0;
+/*=========================
+  VARIÁVEIS GLOBAIS
+=========================*/
+:root {
+  /* Valores padrão (modo escuro) */
+  --bg-bk: #1E1E2F;
+  --text-bk: #F1F1F1;
+  --accent-bk: #5B6DFF;
+  --card-bk: #2A2A40;
+  --border-bk: #3A3A5A;
 
-    /*modo escuro*/
-    --bg-bk: #1E1E2F;
-    --text-bk: #F1F1F1;
-    --accent-bk: #5B6DFF;
-    --card-bk: #2A2A40;
-    --border-bk: #3A3A5A;
+  --port: #EA460A;
+  --mat:  #0077FF;
+  --cien: #199700;
+  --hist: #7700FF;
+  --geo:  #A3230C;
+  --ing:  #FFBB00;
+  --reda: #800020;
 
-    --port: rgb(234, 70, 10);
-    --mat:  rgb(0, 119, 255);
-    --cien: rgb(25, 151, 0);
-    --hist: rgb(119, 0, 255);
-    --geo:  rgb(163, 35, 12);
-    --ing:  rgb(255, 187, 0);
-    --reda: rgb(128, 0, 32);
+  
+  --bg: #d4d4d4;
+  --text: #1C1C1C;
+  --accent: #4A5BFF;
+  --card: #F2F2F2;
+  --border: #CFCFCF;
+
+  --port: #A02000;
+  --mat:  #004EA1;
+  --cien: #166600;
+  --hist: #4B0099;
+  --geo:  #7B2C1B;
+  --ing:  #B88000;
+  --reda: #800020;
+
+  /* Tema Sereno (novo) */
+  --bg-serene: #E8F4F8;
+  --text-serene: #2C3E50;
+  --accent-serene: #3498DB;
+  --card-serene: #FFFFFF;
+  --border-serene: #BDC3C7;
+  
+  /* Cores das matérias no tema sereno */
+  --port-serene: #E74C3C;
+  --mat-serene: #2980B9;
+  --cien-serene: #27AE60;
+  --hist-serene: #9B59B6;
+  --geo-serene: #E67E22;
+  --ing-serene: #F1C40F;
+  --reda-serene: #C0392B;
+
 }
 
-*{
-    padding: 0px;
-    margin: 0px;
+/*=========================
+  RESET E PADRÕES
+=========================*/
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: var(--bg-bk);
+body {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 5px;
-    background-color: var(--card-bk);
-    color: white;
-   
-}
-header .material-symbols-outlined{
-    font-size: 2.5em;
-    cursor: pointer;
-}
-
-header .gamb{
-    color: transparent;
-    cursor: default;
-}
-
-main{
     background-color: var(--bg-bk);
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  
-}
-
-aside{
-    width: 75%;
-    margin-top: 50px;
-    height: 75px;
-    background-color: var(--card-bk);
-    text-align: center;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-aside.pt{
-    box-shadow: 0px 0px 20px 5px var(--port);
-    border: 1px solid var(--port);
-}
-
-aside.mt{
-    box-shadow: 0px 0px 20px 5px var(--mat);
-    border: 1px solid var(--mat);
-}
-
-aside.ci{
-    box-shadow: 0px 0px 20px 5px var(--cien);
-    border: 1px solid var(--cien);
-}
-
-aside.ht{
-    box-shadow: 0px 0px 20px 5px var(--hist);
-    border: 1px solid var(--hist);
-}
-
-aside.ge{
-    box-shadow: 0px 0px 20px 5px var(--geo);
-    border: 1px solid var(--geo);
-}
-
-aside.in{
-    box-shadow: 0px 0px 20px 5px var(--ing);
-    border: 1px solid var(--ing);
-}
-
-aside.re{
-    box-shadow: 0px 0px 20px 5px var(--reda);
-    border: 1px solid var(--reda);
-    
-}
-
-aside a{
-    text-decoration: none;
     color: var(--text-bk);
+    overflow-x: hidden;
 }
 
-aside.pt a p {
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: 2px solid var(--port); 
-    background-color: transparent;
-    color: inherit;
-    font-weight: bold;
-    transition: 0.3s;
-    display: none;
-}
-
-aside.mt a p {
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: 2px solid var(--mat); 
-    background-color: transparent;
-    color: inherit;
-    font-weight: bold;
-    transition: 0.3s;
-    display: none;
-}
-
-aside.ci a p {
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: 2px solid var(--cien); 
-    background-color: transparent;
-    color: inherit;
-    font-weight: bold;
-    transition: 0.3s;
-    display: none;
-}
-
-aside.ht a p {
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: 2px solid var(--hist); 
-    background-color: transparent;
-    color: inherit;
-    font-weight: bold;
-    transition: 0.3s;
-    display: none;
-}
-
-aside.ge a p {
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: 2px solid var(--geo); 
-    background-color: transparent;
-    color: inherit;
-    font-weight: bold;
-    transition: 0.3s;
-    display: none;
-}
-
-aside.in a p {
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: 2px solid var(--ing); 
-    background-color: transparent;
-    color: inherit;
-    font-weight: bold;
-    transition: 0.3s;
-    display: none;
-}
-
-aside {
-    width: 75%;
-    margin-top: 50px;
-    height: auto; /* permite que o conteúdo cresça */
-    background-color: var(--card-bk);
-    text-align: center;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    padding: 20px;
-    
-    display: flex;
-    flex-direction: column; /* empilha conteúdo verticalmente */
-    align-items: center;
-    gap: 10px; /* espaço entre os elementos */
-}
-
-   body {
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #1E1E2F;
-        color: white;
-    }
-    
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px;
-        background-color: #2A2A40;
-    }
-    
-    #settings {
-        font-size: 2.5em;
-        cursor: pointer;
-    }
-    
-    nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    nav li {
-        margin: 10px 0;
-    }
-    
-    nav a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.2em;
-    }
-
-    #menu {
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        background-color: #2A2A40;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    }
-
-    .hidden {
-        display: none;
-    }
-
-    body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #1E1E2F;
-    color: white;
-    overflow: hidden;
-}
-
+/*=========================
+  HEADER
+=========================*/
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: #2A2A40;
+    background-color: var(--card-bk);
+    color: var(--text-bk);
+    position: relative;
+    z-index: 1100;
 }
 
-#settings {
+header .material-symbols-outlined {
     font-size: 2.5em;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
+header .gamb {
+    color: transparent;
+    cursor: default;
+}
+
+#settings.rotated {
+    transform: rotate(180deg);
+}
+
+/*=========================
+  MENU LATERAL (hambúrguer)
+=========================*/
 #menu {
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 50px;
+    left: 0;
     width: 50%;
-    height: 100%;
-    background-color: white;
-    color: black;
+    height: calc(100% - 50px);
+    background-color: var(--card-bk);
+    color: var(--text-bk);
     z-index: 1000;
     transition: transform 0.3s ease;
     overflow-y: auto;
@@ -297,29 +124,8 @@ header {
 
 #menu a {
     text-decoration: none;
-    color: black;
+    color: var(--text-bk);
     font-size: 1.5em;
-}
-
-.menu-hidden {
-    transform: translateX(100%);
-}
-
-.menu-visible {
-    transform: translateX(0);
-}
-
-#menu {
-    position: fixed;
-    top: 0;
-    left: 0; /* Mudado para o lado esquerdo */
-    width: 50%;
-    height: 100%;
-    background-color: white;
-    color: black;
-    z-index: 1000;
-    transition: transform 0.3s ease;
-    overflow-y: auto;
 }
 
 .menu-hidden {
@@ -330,57 +136,92 @@ header {
     transform: translateX(0);
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: #2A2A40;
-    position: relative;
-    z-index: 1100; /* Coloca acima do menu */
-}
-
-#settings {
-    font-size: 2.5em;
+/*=========================
+  ÍCONES DE TEMA
+=========================*/
+#tema-claro, #tema-escuro, #tema-sereno {
+    width: 52px;
+    height: 52px;
     cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.rotated {
-    transform: rotate(180deg);
-}
-
-#menu {
-    position: fixed;
-    top: 50px; /* ajusta aqui para descer o menu */
-    left: 0;
-    width: 50%;
-    height: calc(100% - 50px); /* diminui a altura para caber na tela */
-    background-color: var(--bg-bk);
-    color: white;
-    z-index: 1000;
-    transition: transform 0.3s ease;
-    overflow-y: auto;
-}
-
-#menu {
-    text-decoration: none;
-    color: var(--text-bk); /* Alterado para branco */
-    font-size: 1.5em;
-}
-
-/* Defina o tamanho dos ícones */
-#tema-claro, #tema-escuro {
-  width: 52px; /* ou outro tamanho */
-  height: 52px;
-  cursor: pointer; 
-  color: #fff; /* cor, se quiser mudar! */
-  transform: translate(30px, 16px); 
+    color: var(--text-bk);
+    transform: translate(30px, 16px);
 }
 
 #tema-claro:hover, #tema-escuro:hover {
-  transform: scale(1.0);
-  transition: transform 0.2s ease-in-out;
-  transform: translate(27px, 1px); 
+    transform: scale(1.0) translate(27px, 1px);
+    transition: transform 0.2s ease-in-out;
 }
 
+/*=========================
+  MAIN E ASIDES
+=========================*/
+main {
+    background-color: var(--bg-bk);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+/* Estilo base do aside */
+aside {
+    width: 75%;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: var(--card-bk);
+    text-align: center;
+    color: var(--text-bk);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Asides temáticos com sombra/borda */
+aside.pt { box-shadow: 0 0 20px 5px var(--port); border: 1px solid var(--port); }
+aside.mt { box-shadow: 0 0 20px 5px var(--mat);  border: 1px solid var(--mat); }
+aside.ci { box-shadow: 0 0 20px 5px var(--cien); border: 1px solid var(--cien); }
+aside.ht { box-shadow: 0 0 20px 5px var(--hist); border: 1px solid var(--hist); }
+aside.ge { box-shadow: 0 0 20px 5px var(--geo);  border: 1px solid var(--geo); }
+aside.in { box-shadow: 0 0 20px 5px var(--ing);  border: 1px solid var(--ing); }
+aside.re { box-shadow: 0 0 20px 5px var(--reda); border: 1px solid var(--reda); }
+
+/* Links dentro do aside */
+aside a {
+    text-decoration: none;
+    color: var(--text-bk);
+}
+
+/* Botões (p) escondidos inicialmente */
+aside a p {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: transparent;
+    color: inherit;
+    font-weight: bold;
+    transition: 0.3s;
+    display: none;
+    border: 2px solid currentColor;
+}
+
+/* Especificar cores para os botões */
+aside.pt a p { color: var(--port); border-color: var(--port); }
+aside.mt a p { color: var(--mat);  border-color: var(--mat); }
+aside.ci a p { color: var(--cien); border-color: var(--cien); }
+aside.ht a p { color: var(--hist); border-color: var(--hist); }
+aside.ge a p { color: var(--geo);  border-color: var(--geo); }
+aside.in a p { color: var(--ing);  border-color: var(--ing); }
+aside.re a p { color: var(--reda); border-color: var(--reda); }
+
+/* Esconde todos os ícones de tema inicialmente */
+#tema-claro, #tema-sereno {
+  display: none;
+}
+
+/* Mostra apenas o ícone do tema ativo */
+body.tema-escuro #tema-escuro,
+body.tema-claro #tema-claro,
+body.tema-sereno #tema-sereno {
+  display: inline-block;
+}
