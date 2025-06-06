@@ -1,60 +1,48 @@
 @charset "UTF-8";
 
-/*=========================
-  VARIÁVEIS GLOBAIS
-=========================*/
+/* VARIÁVEIS GLOBAIS */
 :root {
-  /* Valores padrão (modo escuro) */
-  --bg-bk: #1E1E2F;
-  --text-bk: #F1F1F1;
-  --accent-bk: #5B6DFF;
-  --card-bk: #2A2A40;
-  --border-bk: #3A3A5A;
+    /* Tema Escuro (padrão) */
+    --bg-escuro: #1E1E2F;
+    --text-escuro: #F1F1F1;
+    --accent-escuro: #5B6DFF;
+    --card-escuro: #2A2A40;
+    --border-escuro: #3A3A5A;
+    --port-escuro: #EA460A;
+    --mat-escuro: #0077FF;
+    --cien-escuro: #199700;
+    --hist-escuro: #7700FF;
+    --geo-escuro: #A3230C;
+    --ing-escuro: #FFBB00;
 
-  --port: #EA460A;
-  --mat:  #0077FF;
-  --cien: #199700;
-  --hist: #7700FF;
-  --geo:  #A3230C;
-  --ing:  #FFBB00;
-  --reda: #800020;
+    /* Tema Claro */
+    --bg-claro: #f0f0f0;
+    --text-claro: #333333;
+    --accent-claro: #4A5BFF;
+    --card-claro: #ffffff;
+    --border-claro: #dddddd;
+    --port-claro: #A02000;
+    --mat-claro: #004EA1;
+    --cien-claro: #166600;
+    --hist-claro: #4B0099;
+    --geo-claro: #7B2C1B;
+    --ing-claro: #B88000;
 
-  
-  --bg: #d4d4d4;
-  --text: #1C1C1C;
-  --accent: #4A5BFF;
-  --card: #F2F2F2;
-  --border: #CFCFCF;
-
-  --port: #A02000;
-  --mat:  #004EA1;
-  --cien: #166600;
-  --hist: #4B0099;
-  --geo:  #7B2C1B;
-  --ing:  #B88000;
-  --reda: #800020;
-
-  /* Tema Sereno (novo) */
-  --bg-serene: #E8F4F8;
-  --text-serene: #2C3E50;
-  --accent-serene: #3498DB;
-  --card-serene: #FFFFFF;
-  --border-serene: #BDC3C7;
-  
-  /* Cores das matérias no tema sereno */
-  --port-serene: #E74C3C;
-  --mat-serene: #2980B9;
-  --cien-serene: #27AE60;
-  --hist-serene: #9B59B6;
-  --geo-serene: #E67E22;
-  --ing-serene: #F1C40F;
-  --reda-serene: #C0392B;
-
+    /* Tema Sereno */
+    --bg-serene: #E8F4F8;
+    --text-serene: #2C3E50;
+    --accent-serene: #3498DB;
+    --card-serene: #FFFFFF;
+    --border-serene: #BDC3C7;
+    --port-serene: #E74C3C;
+    --mat-serene: #2980B9;
+    --cien-serene: #27AE60;
+    --hist-serene: #9B59B6;
+    --geo-serene: #E67E22;
+    --ing-serene: #F1C40F;
 }
 
-/*=========================
-  RESET E PADRÕES
-=========================*/
+/* RESET E PADRÕES */
 * {
     padding: 0;
     margin: 0;
@@ -63,21 +51,66 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--bg-bk);
-    color: var(--text-bk);
+    transition: background-color 0.3s, color 0.3s;
     overflow-x: hidden;
 }
 
-/*=========================
-  HEADER
-=========================*/
+/* APLICAÇÃO DOS TEMAS */
+body.tema-escuro {
+    --bg: var(--bg-escuro);
+    --text: var(--text-escuro);
+    --accent: var(--accent-escuro);
+    --card: var(--card-escuro);
+    --border: var(--border-escuro);
+    --port: var(--port-escuro);
+    --mat: var(--mat-escuro);
+    --cien: var(--cien-escuro);
+    --hist: var(--hist-escuro);
+    --geo: var(--geo-escuro);
+    --ing: var(--ing-escuro);
+}
+
+body.tema-claro {
+    --bg: var(--bg-claro);
+    --text: var(--text-claro);
+    --accent: var(--accent-claro);
+    --card: var(--card-claro);
+    --border: var(--border-claro);
+    --port: var(--port-claro);
+    --mat: var(--mat-claro);
+    --cien: var(--cien-claro);
+    --hist: var(--hist-claro);
+    --geo: var(--geo-claro);
+    --ing: var(--ing-claro);
+}
+
+body.tema-sereno {
+    --bg: var(--bg-serene);
+    --text: var(--text-serene);
+    --accent: var(--accent-serene);
+    --card: var(--card-serene);
+    --border: var(--border-serene);
+    --port: var(--port-serene);
+    --mat: var(--mat-serene);
+    --cien: var(--cien-serene);
+    --hist: var(--hist-serene);
+    --geo: var(--geo-serene);
+    --ing: var(--ing-serene);
+}
+
+/* ESTRUTURA PRINCIPAL */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: var(--card-bk);
-    color: var(--text-bk);
+    background-color: var(--card);
+    color: var(--text);
     position: relative;
     z-index: 1100;
 }
@@ -97,20 +130,23 @@ header .gamb {
     transform: rotate(180deg);
 }
 
-/*=========================
-  MENU LATERAL (hambúrguer)
-=========================*/
+/* MENU LATERAL */
 #menu {
     position: fixed;
-    top: 50px;
+    top: 70px;
     left: 0;
     width: 50%;
-    height: calc(100% - 50px);
-    background-color: var(--card-bk);
-    color: var(--text-bk);
+    height: calc(100vh - 70px);
+    background-color: var(--card);
+    color: var(--text);
     z-index: 1000;
+    transform: translateX(-100%);
     transition: transform 0.3s ease;
     overflow-y: auto;
+}
+
+#menu.menu-visible {
+    transform: translateX(0);
 }
 
 #menu ul {
@@ -120,108 +156,101 @@ header .gamb {
 
 #menu li {
     margin: 15px 0;
-}
-
-#menu a {
-    text-decoration: none;
-    color: var(--text-bk);
-    font-size: 1.5em;
-}
-
-.menu-hidden {
-    transform: translateX(-100%);
-}
-
-.menu-visible {
-    transform: translateX(0);
-}
-
-/*=========================
-  ÍCONES DE TEMA
-=========================*/
-#tema-claro, #tema-escuro, #tema-sereno {
-    width: 52px;
-    height: 52px;
-    cursor: pointer;
-    color: var(--text-bk);
-    transform: translate(30px, 16px);
-}
-
-#tema-claro:hover, #tema-escuro:hover {
-    transform: scale(1.0) translate(27px, 1px);
-    transition: transform 0.2s ease-in-out;
-}
-
-/*=========================
-  MAIN E ASIDES
-=========================*/
-main {
-    background-color: var(--bg-bk);
     display: flex;
-    flex-flow: column nowrap;
     align-items: center;
 }
 
-/* Estilo base do aside */
+#menu svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+#menu svg.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    background-color: var(--bg);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 20px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    background-color: var(--bg);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 20px;
+    gap: 20px; /* Adicionei esta linha para criar espaçamento entre os blocos */
+}
+
 aside {
     width: 75%;
-    margin-top: 50px;
     padding: 20px;
-    background-color: var(--card-bk);
+    background-color: var(--card);
     text-align: center;
-    color: var(--text-bk);
+    color: var(--text);
     border-radius: 10px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    transition: all 0.3s ease;
+    margin-bottom: 0; /* Removi a margem superior que estava antes */
 }
 
-/* Asides temáticos com sombra/borda */
+aside {
+    width: 75%;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--card);
+    text-align: center;
+    color: var(--text);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+/* ASIDES TEMÁTICOS */
 aside.pt { box-shadow: 0 0 20px 5px var(--port); border: 1px solid var(--port); }
-aside.mt { box-shadow: 0 0 20px 5px var(--mat);  border: 1px solid var(--mat); }
+aside.mt { box-shadow: 0 0 20px 5px var(--mat); border: 1px solid var(--mat); }
 aside.ci { box-shadow: 0 0 20px 5px var(--cien); border: 1px solid var(--cien); }
 aside.ht { box-shadow: 0 0 20px 5px var(--hist); border: 1px solid var(--hist); }
-aside.ge { box-shadow: 0 0 20px 5px var(--geo);  border: 1px solid var(--geo); }
-aside.in { box-shadow: 0 0 20px 5px var(--ing);  border: 1px solid var(--ing); }
-aside.re { box-shadow: 0 0 20px 5px var(--reda); border: 1px solid var(--reda); }
+aside.ge { box-shadow: 0 0 20px 5px var(--geo); border: 1px solid var(--geo); }
+aside.in { box-shadow: 0 0 20px 5px var(--ing); border: 1px solid var(--ing); }
 
-/* Links dentro do aside */
 aside a {
     text-decoration: none;
-    color: var(--text-bk);
+    color: var(--text);
 }
 
-/* Botões (p) escondidos inicialmente */
 aside a p {
     padding: 8px 16px;
     border-radius: 8px;
     background-color: transparent;
-    color: inherit;
     font-weight: bold;
     transition: 0.3s;
     display: none;
     border: 2px solid currentColor;
 }
 
-/* Especificar cores para os botões */
 aside.pt a p { color: var(--port); border-color: var(--port); }
-aside.mt a p { color: var(--mat);  border-color: var(--mat); }
+aside.mt a p { color: var(--mat); border-color: var(--mat); }
 aside.ci a p { color: var(--cien); border-color: var(--cien); }
 aside.ht a p { color: var(--hist); border-color: var(--hist); }
-aside.ge a p { color: var(--geo);  border-color: var(--geo); }
-aside.in a p { color: var(--ing);  border-color: var(--ing); }
-aside.re a p { color: var(--reda); border-color: var(--reda); }
-
-/* Esconde todos os ícones de tema inicialmente */
-#tema-claro, #tema-sereno {
-  display: none;
-}
-
-/* Mostra apenas o ícone do tema ativo */
-body.tema-escuro #tema-escuro,
-body.tema-claro #tema-claro,
-body.tema-sereno #tema-sereno {
-  display: inline-block;
-}
+aside.ge a p { color: var(--geo); border-color: var(--geo); }
+aside.in a p { color: var(--ing); border-color: var(--ing); }

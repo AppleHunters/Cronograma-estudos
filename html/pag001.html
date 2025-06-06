@@ -6,9 +6,8 @@
     <title>Crônostudo</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="../style/pag001.css">
-    
 </head>
-<body class="tema-claro">
+<body class="tema-escuro">
     <header>
         <span class="material-symbols-outlined eng" id="settings">settings</span>
         <h1>Crônostudo</h1>
@@ -16,20 +15,34 @@
     </header>
 
     <nav id="menu" class="menu-hidden">
-    <ul>
-        <li>Tema Claro: 
-            <svg id="tema-claro" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-toggle-left-icon lucide-toggle-left" onclick="tc()"><circle cx="9" cy="12" r="3"/><rect width="20" height="14" x="2" y="5" rx="7"/></svg>
-            <svg id="tema-escuro" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide c" onclick="te()"><circle cx="15" cy="12" r="3"/><rect width="20" height="14" x="2" y="5" rx="7"/></svg>
-        </li>
-        <li>Tema Sereno: 
-            <svg id="tema-sereno" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-toggle-left-icon lucide-toggle-left" onclick="ts()" ><circle cx="9" cy="12" r="3"/><rect width="20" height="14" x="2" y="5" rx="7"/></svg>
-            <svg id="tema-escuro" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide c" onclick="te()"><circle cx="15" cy="12" r="3"/><rect width="20" height="14" x="2" y="5" rx="7"/></svg>
-        </li>
-    </ul>
-</nav>
+        <ul>
+            <li>Tema Claro: 
+                <svg id="tema-claro" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                </svg>
+            </li>
+            <li>Tema Escuro: 
+                <svg id="tema-escuro" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </li>
+            <li>Tema Sereno: 
+                <svg id="tema-sereno" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 10V2"/>
+                    <path d="m4.93 10.93 1.41 1.41"/>
+                    <path d="M2 18h2"/>
+                    <path d="m20 6-1.41 1.41"/>
+                    <path d="M22 18h-2"/>
+                    <path d="m15.07 10.93-1.41 1.41"/>
+                    <path d="M12 22v-8"/>
+                    <circle cx="12" cy="12" r="4"/>
+                </svg>
+            </li>
+        </ul>
+    </nav>
 
     <main>
-        <!-- Seus asides continuam aqui -->
         <aside class="pt">
             <h2>Português</h2>
             <a href="port.html">
@@ -68,7 +81,6 @@
         </aside>
     </main>
 
-   <script src="../script/cro.js"></script>
-
+    <script src="../script/cro.js"></script>
 </body>
 </html>
