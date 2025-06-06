@@ -254,3 +254,29 @@ aside.ci a p { color: var(--cien); border-color: var(--cien); }
 aside.ht a p { color: var(--hist); border-color: var(--hist); }
 aside.ge a p { color: var(--geo); border-color: var(--geo); }
 aside.in a p { color: var(--ing); border-color: var(--ing); }
+
+/* Garante que os links sejam totalmente clicáveis */
+aside a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Melhora a aparência dos botões ativos */
+#menu svg.active {
+    opacity: 1;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 3px currentColor);
+}
+
+/* Garante transição suave para o tema */
+body.tema-transicao {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Corrige o z-index do menu para ficar acima de tudo */
+#menu {
+    z-index: 1000;
+}

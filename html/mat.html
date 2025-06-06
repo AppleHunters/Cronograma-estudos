@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=event_available" />
     <link rel="stylesheet" href="../style/cronograma.css">
 </head>
-<body>
+<body class="tema-escuro">
     <div class="header">
         <span class="material-symbols-outlined">event_available</span>
         <h1>Meu Cronograma - Matemática</h1>
@@ -79,5 +79,12 @@
         </table>
     </main>
     <footer>Feito Por <a href="https://github.com/AppleHunters">AppleHunters &copy;</a></footer>
+    <script>
+    // Aplica o tema IMEDIATAMENTE ao carregar
+    document.addEventListener('DOMContentLoaded', function() {
+        const temaSalvo = localStorage.getItem('tema') || 'escuro';
+        document.body.className = `tema-${temaSalvo} tema-transicao`;
+    });
+</script>
 </body>
 </html>
