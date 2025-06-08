@@ -271,3 +271,14 @@ a {
   color: var(--text);
   text-decoration: solid;
 }
+
+#add{
+  border: 1px solid var(--border-claro);
+  padding: 9px;
+  color: var(--text);
+  text-align: center;
+  word-wrap: break-word;
+  white-space: normal;
+  min-height: 60px;
+  font-size: 16px;
+}

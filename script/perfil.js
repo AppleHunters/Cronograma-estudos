@@ -45,3 +45,39 @@ function salvarImagemPerfil() {
     reader.readAsDataURL(file);
   }
 }
+
+  document.addEventListener('DOMContentLoaded', function() {
+        const temaSalvo = localStorage.getItem('tema') || 'escuro';
+        document.body.className = `tema-${temaSalvo} tema-transicao`;
+    });
+
+    const nomeUsuario = sessionStorage.getItem('user')
+const elemento = document.getElementById('bemVindo')
+
+if (nomeUsuario) {
+    elemento.innerText = `Bem-vind@, ${nomeUsuario}!`
+} else {
+    elemento.innerText = 'Bem-vind@!'
+}
+
+const materias = sessionStorage.getItem('materiasEstudadas')
+const h2Materias = document.getElementById('materiasHoje')
+
+if (materias) {
+    const listaFormatada = materias.split(',').map(m => `• ${m}`).join('<br>')
+    h2Materias.innerHTML = `Matérias Estudadas Hoje:<br>${listaFormatada}`
+
+} else {
+    h2Materias.innerText = 'Matérias Estudadas Hoje: Nenhuma ainda 😴'
+}
+
+
+
+const dados = JSON.parse(localStorage.getItem('materiasEstudadas'));
+
+if (dados && dados.materias.length > 0) {
+  const listaFormatada = dados.materias.map(m => `• ${m}`).join('<br>');
+  h2Materias.innerHTML = `Matérias Estudadas Hoje:<br>${listaFormatada}`;
+} else {
+  h2Materias.innerText = "Matérias Estudadas Hoje:\nNenhuma ainda.";
+}
