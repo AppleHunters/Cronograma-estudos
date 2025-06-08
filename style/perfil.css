@@ -47,6 +47,26 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--border-escuro);
+}
+
+header, main, footer {
+    width: 100%;
+}
+
+main {
+    flex: 1;
+}
+
+
+body{
+    background-color: var(--border-escuro);
+}
+
 header {
     display: flex;
     padding: 15px;
@@ -64,3 +84,176 @@ header svg{
     height: 40px;
 }
 
+aside{
+    background-color: var(--bg-escuro);
+    color: var(--text-escuro);
+}
+
+.bemv{
+    text-align: center;
+    font-size: 1.3em;
+    padding: 15px;
+}
+
+.sb{
+     animation: subirDescer 2s infinite ease-in-out;
+}
+
+  @keyframes subirDescer {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+#pf {
+   
+    border-radius: 50%;
+    width: 85px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:  auto; /* Centraliza horizontalmente */
+}
+
+.pf svg {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.pf p{
+    padding: 10px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+aside.mate{
+    background-color: var(--border-escuro);
+    font-size: 1.9em;
+}
+
+footer{
+    background-color: var(--bg-escuro);
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--text-escuro);
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--text-escuro);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo {
+    background-color: var(--card-escuro);
+    color: var(--text-escuro);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.opcoes-foto {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.foto-perfil {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-conteudo {
+  background-color: var(--card-escuro);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.fechar {
+  font-size: 1.5em;
+  cursor: pointer;
+  float: right;
+}
+
+.bolinha {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+#fotoPerfil {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: var(--roxo-claro);
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+
+.lucide{
+    color: var(--text-escuro);
+}
+
+#fotoPerfil {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: var(--roxo-claro);
+  background-image: url('../style/images/user-icon.svg'); /* ícone padrão */
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 auto 10px;
+}
