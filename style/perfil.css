@@ -1,0 +1,66 @@
+@charset "UFT-8";
+
+:root {
+    /* Tema Escuro (padrão) */
+    --bg-escuro: #1E1E2F;
+    --text-escuro: #F1F1F1;
+    --accent-escuro: #5B6DFF;
+    --card-escuro: #2A2A40;
+    --border-escuro: #3A3A5A;
+    --port-escuro: #EA460A;
+    --mat-escuro: #0077FF;
+    --cien-escuro: #199700;
+    --hist-escuro: #7700FF;
+    --geo-escuro: #A3230C;
+    --ing-escuro: #FFBB00;
+
+    /* Tema Claro */
+    --bg-claro: #f0f0f0;
+    --text-claro: #333333;
+    --accent-claro: #4A5BFF;
+    --card-claro: #ffffff;
+    --border-claro: #dddddd;
+    --port-claro: #A02000;
+    --mat-claro: #004EA1;
+    --cien-claro: #166600;
+    --hist-claro: #4B0099;
+    --geo-claro: #7B2C1B;
+    --ing-claro: #B88000;
+
+    /* Tema Sereno */
+    --bg-serene: #E8F4F8;
+    --text-serene: #2C3E50;
+    --accent-serene: #3498DB;
+    --card-serene: #FFFFFF;
+    --border-serene: #BDC3C7;
+    --port-serene: #E74C3C;
+    --mat-serene: #2980B9;
+    --cien-serene: #27AE60;
+    --hist-serene: #9B59B6;
+    --geo-serene: #E67E22;
+    --ing-serene: #F1C40F;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    padding: 15px;
+    margin: auto;
+    background-color: var(--card-escuro);
+    color: var(--text-escuro);
+    position: relative;
+    z-index: 1100;
+    gap: 150px;
+}
+
+header svg{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
