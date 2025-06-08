@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const addBtn = document.getElementById('add');
   const tabela = document.querySelector('.cronograma');
-  
+
   // Criar cabeçalho (thead) fixo, se ainda não existir
   if (!tabela.querySelector('thead')) {
     const thead = document.createElement('thead');
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     thead.appendChild(trHead);
     tabela.appendChild(thead);
   }
-  
+
   // Garantir que tbody exista
   let tbody = tabela.querySelector('tbody');
   if (!tbody) {
@@ -23,25 +23,71 @@ document.addEventListener('DOMContentLoaded', () => {
     tabela.appendChild(tbody);
   }
 
+  // Função para salvar o cronograma no localStorage
+  function salvarCronograma() {
+    const linhas = [];
+    for (const tr of tbody.querySelectorAll('tr')) {
+      const celulas = [];
+      for (const td of tr.querySelectorAll('td')) {
+        celulas.push(td.textContent);
+      }
+      linhas.push(celulas);
+    }
+    localStorage.setItem('cronograma', JSON.stringify(linhas));
+  }
+
+  // Função para carregar o cronograma do localStorage
+  function carregarCronograma() {
+    const cronogramaSalvo = localStorage.getItem('cronograma');
+    if (cronogramaSalvo) {
+      const linhas = JSON.parse(cronogramaSalvo);
+      tbody.innerHTML = ''; // limpa tbody antes de inserir
+
+      linhas.forEach(celulas => {
+        const tr = document.createElement('tr');
+        celulas.forEach((texto, i) => {
+          const td = document.createElement('td');
+          td.contentEditable = "true";
+          td.textContent = texto;
+          if(i === 0) {
+            td.style.fontWeight = 'bold';
+          }
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      adicionarListenersDeEdicao();
+    }
+  }
+
+  // Ao clicar no botão "+", cria uma nova linha editável
   addBtn.addEventListener('click', () => {
-    // Criar uma nova linha com 6 colunas (1 horário + 5 dias)
     const tr = document.createElement('tr');
-    
     for (let i = 0; i < 6; i++) {
       const td = document.createElement('td');
       td.contentEditable = "true";
       if (i === 0) {
         td.textContent = 'Horário';
-        td.style.fontWeight = 'bold';  // destacar a coluna do horário
+        td.style.fontWeight = 'bold';
       } else {
-        td.textContent = ''; // célula vazia para dias
+        td.textContent = '';
       }
       tr.appendChild(td);
     }
-    
     tbody.appendChild(tr);
-    
-    // Focar na primeira célula editável após horário
+    adicionarListenersDeEdicao();
     tr.cells[1].focus();
+    salvarCronograma();
   });
+
+  // Adiciona event listeners para salvar quando o conteúdo for editado
+  function adicionarListenersDeEdicao() {
+    const tds = tbody.querySelectorAll('td[contenteditable="true"]');
+    tds.forEach(td => {
+      td.addEventListener('input', salvarCronograma);
+    });
+  }
+
+  // Carregar o cronograma quando a página abrir
+  carregarCronograma();
 });

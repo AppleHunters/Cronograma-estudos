@@ -15,6 +15,7 @@
     --hist-escuro: #7700FF;
     --geo-escuro: #A3230C;
     --ing-escuro: #FFBB00;
+    --cria-escuro: #303030;
 
     /* Tema Claro */
     --bg-claro: #f0f0f0;
@@ -28,6 +29,7 @@
     --hist-claro: #4B0099;
     --geo-claro: #7B2C1B;
     --ing-claro: #B88000;
+    --cria-escuro: #525252;
 
     /* Tema Sereno */
     --bg-serene: #E8F4F8;
@@ -41,6 +43,7 @@
     --hist-serene: #9B59B6;
     --geo-serene: #E67E22;
     --ing-serene: #F1C40F;
+    --cria-escuro:  #4c5153;
 }
 
 /* RESET E PADRÕES */
@@ -233,6 +236,7 @@ aside.ci { box-shadow: 0 0 20px 5px var(--cien); border: 1px solid var(--cien); 
 aside.ht { box-shadow: 0 0 20px 5px var(--hist); border: 1px solid var(--hist); }
 aside.ge { box-shadow: 0 0 20px 5px var(--geo); border: 1px solid var(--geo); }
 aside.in { box-shadow: 0 0 20px 5px var(--ing); border: 1px solid var(--ing); }
+aside.cria { box-shadow: 0 0 20px 5px var(--cria-escuro); border: 1px solid var(--cria-escuro); }
 
 aside a {
     text-decoration: none;
@@ -255,6 +259,7 @@ aside.ci a p { color: var(--cien); border-color: var(--cien); }
 aside.ht a p { color: var(--hist); border-color: var(--hist); }
 aside.ge a p { color: var(--geo); border-color: var(--geo); }
 aside.in a p { color: var(--ing); border-color: var(--ing); }
+aside.cria a p {color: var(--cria-escuro); border-color: var(--cria-escuro);}
 
 /* Garante que os links sejam totalmente clicáveis */
 aside a {
