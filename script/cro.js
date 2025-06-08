@@ -82,3 +82,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const temaSalvo = localStorage.getItem('tema') || 'escuro';
     aplicarTema(temaSalvo);
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+  const salva = localStorage.getItem('fotoPerfil');
+  if (salva) {
+    const fotoPerfil = document.getElementById('fotoPerfil');
+    fotoPerfil.style.backgroundImage = `url(${salva})`;
+  }
+});
+
+fotoPerfil.style.backgroundImage = `url(${src})`;

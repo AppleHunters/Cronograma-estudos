@@ -312,3 +312,23 @@ nav ul {
   text-align: center;
 }
 
+#fotoPerfil {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  background-color: #ccc; /* fallback */
+}
+
+#fotoPerfil {
+  position: relative; /* necessário se você quer colocar algo por cima */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-color: #ccc;
+  overflow: hidden;
+}

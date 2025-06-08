@@ -31,3 +31,17 @@ window.addEventListener('DOMContentLoaded', () => {
     fotoPerfil.style.backgroundImage = `url(${salva})`;
   }
 });
+
+function salvarImagemPerfil() {
+  const input = document.getElementById('inputImagemPerfil');
+  const file = input.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function () {
+      localStorage.setItem('imagemPerfil', reader.result);
+      alert("Imagem salva com sucesso!");
+    };
+    reader.readAsDataURL(file);
+  }
+}
