@@ -1,192 +1,273 @@
-@charset "UFT-8";
+@charset "UTF-8";
 
+/* ========================== */
+/*         VARIÁVEIS         */
+/* ========================== */
 :root {
-    /* Modo claro */
-    --bg-wt: #F7F7F7;
-    --text-wt: #1E1E1E;
-    --accent-wt: #5B6DFF;
-    --card-wt: #FFFFFF;
-    --border-wt: #E0E0E0;
+  /* Tema Escuro (padrão) */
+  --bg-escuro: #1E1E2F;
+  --text-escuro: #F1F1F1;
+  --accent-escuro: #5B6DFF;
+  --card-escuro: #2A2A40;
+  --border-escuro: #3A3A5A;
+  --port-escuro: #EA460A;
+  --mat-escuro: #0077FF;
+  --cien-escuro: #199700;
+  --hist-escuro: #7700FF;
+  --geo-escuro: #A3230C;
+  --ing-escuro: #FFBB00;
 
-    /* Modo escuro */
-    --bg-bk: #1E1E2F;
-    --text-bk: #F1F1F1;
-    --accent-bk: #5B6DFF;
-    --card-bk: #2A2A40;
-    --border-bk: #3A3A5A;
+  /* Tema Claro */
+  --bg-claro: #f0f0f0;
+  --text-claro: #333333;
+  --accent-claro: #4A5BFF;
+  --card-claro: #ffffff;
+  --border-claro: #bbbbbb;
+  --port-claro: #A02000;
+  --mat-claro: #004EA1;
+  --cien-claro: #166600;
+  --hist-claro: #4B0099;
+  --geo-claro: #7B2C1B;
+  --ing-claro: #B88000;
 
-    --port: rgb(228, 80, 26);
-    --mat:  rgb(0, 119, 255);
-    --cien: rgb(25, 151, 0);
-    --hist: rgb(119, 0, 255);
-    --geo:  rgb(163, 35, 12);
-    --ing:  rgb(255, 187, 0);
-    --reda: rgb(128, 0, 32);
+  /* Tema Sereno */
+  --bg-serene: #E8F4F8;
+  --text-serene: #2C3E50;
+  --accent-serene: #3498DB;
+  --card-serene: #FFFFFF;
+   --border-serene: #a0b0c0;
+  --port-serene: #E74C3C;
+  --mat-serene: #2980B9;
+  --cien-serene: #27AE60;
+  --hist-serene: #9B59B6;
+  --geo-serene: #E67E22;
+  --ing-serene: #F1C40F;
 }
 
+/* ========================== */
+/*      RESET E BASE GERAL   */
+/* ========================== */
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Garante que ocupe a altura inteira da tela */
-    background-color: var(--bg-bk);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
 }
 
-/* Main ocupa todo o espaço disponível */
-main {
-    flex-grow: 1;
-    padding-bottom: 20px; /* Espaço extra para não grudar no footer */
+/* ========================== */
+/*      DEFINIÇÃO DE TEMA     */
+/* ========================== */
+body.tema-escuro {
+  --bg: var(--bg-escuro);
+  --text: var(--text-escuro);
+  --accent: var(--accent-escuro);
+  --card: var(--card-escuro);
+  --border: var(--border-escuro);
+  --port: var(--port-escuro);
+  --mat: var(--mat-escuro);
+  --cien: var(--cien-escuro);
+  --hist: var(--hist-escuro);
+  --geo: var(--geo-escuro);
+  --ing: var(--ing-escuro);
 }
 
+body.tema-claro {
+  --bg: var(--bg-claro);
+  --text: var(--text-claro);
+  --accent: var(--accent-claro);
+  --card: var(--card-claro);
+  --border: var(--border-claro);
+  --port: var(--port-claro);
+  --mat: var(--mat-claro);
+  --cien: var(--cien-claro);
+  --hist: var(--hist-claro);
+  --geo: var(--geo-claro);
+  --ing: var(--ing-claro);
+}
+
+body.tema-sereno {
+  --bg: var(--bg-serene);
+  --text: var(--text-serene);
+  --accent: var(--accent-serene);
+  --card: var(--card-serene);
+  --border: var(--border-serene);
+  --port: var(--port-serene);
+  --mat: var(--mat-serene);
+  --cien: var(--cien-serene);
+  --hist: var(--hist-serene);
+  --geo: var(--geo-serene);
+  --ing: var(--ing-serene);
+}
+
+/* ========================== */
+/*           HEADER           */
+/* ========================== */
 .header {
-    background-color: var(--bg-bk);
-    display: flex;
-    font-size: 20px;
-    height: 130px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  background-color: var(--bg);
+  display: flex;
+  font-size: 20px;
+  height: 130px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.header > h1 {
-    font-size: 35px;
-    color: var(--text-bk);
+.header h1 {
+  font-size: 35px;
+  color: var(--text);
 }
 
-.header > span {
-    color: #5B6DFF;
-    font-size: 45px;
-    margin-right: 10px;
+.header span {
+  color: var(--accent);
+  font-size: 45px;
+  margin-right: 10px;
 }
 
 header {
-    background-color: var(--border-bk);
-    height: 300px;
-    color: var(--text-bk);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-color: var(--border);
+  height: 300px;
+  color: var(--text);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 header h1 {
-    padding: 20px;
+  padding: 20px;
 }
 
 header p {
-    color: var(--text-bk);
+  color: var(--text);
 }
 
 header a {
-    text-decoration: none;
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Botão Responsivo */
+/* ========================== */
+/*          BOTÃO             */
+/* ========================== */
 .btn {
-    border-radius: 10px;
-    background-color: var(--accent-bk);
-    box-shadow: 2px 2px 5px 5px var(--accent-bk);
-    width: 10em;
-    max-width: 800px;
-    height: 70px;
-    font-size: 24px;
-    color: var(--text-bk);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-    text-decoration: none;
+  border-radius: 10px;
+  background-color: var(--accent);
+  box-shadow: 2px 2px 5px 5px var(--accent);
+  width: 10em;
+  max-width: 800px;
+  height: 70px;
+  font-size: 24px;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-@media screen and (min-width: 768px) {
-    header h1 {
-        font-size: 2.6em;
-    }
-    
-    header p {
-        font-size: 1.5em;
-    }
+.btn:hover {
+  filter: brightness(1.1);
+}
 
-    .btn {
-        width: 30em;
-    }
+/* Responsivo */
+@media screen and (min-width: 768px) {
+  header h1 {
+    font-size: 2.6em;
+  }
+
+  header p {
+    font-size: 1.5em;
+  }
+
+  .btn {
+    width: 30em;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .btn {
-        width: 45em;
-        transition: all 0.3s ease;
-    }
+  .btn {
+    width: 45em;
+  }
 
-    .btn:hover {
-        width: 60em;
-        box-shadow: 0px 0px 20px 5px rgba(91, 109, 255, 0.5);
-    }
+  .btn:hover {
+    width: 60em;
+    box-shadow: 0 0 20px 5px rgba(91, 109, 255, 0.5);
+  }
 }
 
 @media screen and (min-width: 1920px) {
-    .btn {
-        width: 65em;
-        transition: all 0.3s ease;
-    }
+  .btn {
+    width: 65em;
+  }
 
-    .btn:hover {
-        width: 80em;
-        height: 4em;
-        box-shadow: 0px 0px 25px 7px rgba(91, 109, 255, 0.5);
-    }
+  .btn:hover {
+    width: 80em;
+    height: 4em;
+    box-shadow: 0 0 25px 7px rgba(91, 109, 255, 0.5);
+  }
 }
 
-/* Tabela Cronograma */
+/* ========================== */
+/*         CRONOGRAMA         */
+/* ========================== */
 .cronograma {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-top: 30px;
 }
 
 .cronograma th,
 .cronograma td {
-    border: 1px solid var(--border-wt);
-    padding: 12px;
-    color: var(--text-bk);
-    text-align: center;
-    word-wrap: break-word;
-    white-space: normal;
-    min-height: 60px;
-    font-size: 16px;
+  border: 1px solid var(--border);
+  padding: 12px;
+  color: var(--text);
+  text-align: center;
+  word-wrap: break-word;
+  white-space: normal;
+  min-height: 60px;
+  font-size: 16px;
 }
 
 .cronograma thead {
-    background-color: var(--accent-bk);
-    color: white;
+  background-color: var(--accent);
+  color: white;
 }
 
-/* Footer fixo no final da página */
+/* ========================== */
+/*           FOOTER           */
+/* ========================== */
 footer {
-    background-color: var(--border-bk);
-    height: 2em;
-    text-align: center;
-    font-size: 20px;
-    width: 100%;
-    margin-top: auto;
-    transform: translateY(50px);
+  background-color: var(--border);
+  height: 2em;
+  text-align: center;
+  font-size: 20px;
+  width: 100%;
+  margin-top: auto;
+  transform: translateY(50px);
 }
 
 footer a {
-    text-decoration: none;
-    color: #5B6DFF;
+  text-decoration: none;
+  color: var(--accent);
 }
 
-a{
-    color: var(--text-bk);
-    text-decoration: solid;
+/* ========================== */
+/*        LINKS GERAIS        */
+/* ========================== */
+a {
+  color: var(--text);
+  text-decoration: solid;
 }
-
