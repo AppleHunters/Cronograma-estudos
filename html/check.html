@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Cronograma</title>
+    <title>Checklist</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=event_available" />
     <link rel="stylesheet" href="../style/cronograma.css">
 </head>
@@ -12,27 +12,23 @@
         <span class="material-symbols-outlined">
             event_available
         </span>
-        <h1>Meu Cronograma</h1>
+        <h1>Minha Checklist</h1>
         <div>
             <!--Quem ler isso aqui faz um menu norget daora ai-->
         </div>
     </div>
     <header>
         <h1>Maximize Seus Estudos!!!</h1> <br>
-        <p>Planeje seus estudos com esse cronograma</p> <br>
+        <p>Cheque As Atividades Que Você Fez No Dia</p> <br>
         <a href="/html/pag001.html">
             <p class="btn">Outras Disciplinas</p>
         </a>
     </header>
     <main>
-        <div class="add">+</div>
-        <table class="cronograma">
-            <thead>
-            <tbody>
-            </tbody>
-        </table>
+       <aside class="add" id="ck">Adicionar Atividades</aside>
+       <aside class="item-check"></aside>
     </main>
-    <footer>Feito Por <a href="https://github.com/AppleHunters">AppleHunters &copy;</a></footer>
+    <footer>Feito Por <a href="https://github.com/AppleHunters">AppleHunters &copy;</a></footer>]
     <script>
     // Aplica o tema IMEDIATAMENTE ao carregar
     document.addEventListener('DOMContentLoaded', function() {
@@ -40,6 +36,6 @@
         document.body.className = `tema-${temaSalvo} tema-transicao`;
     });
 </script>
-<script src="../script/gen.js"></script>
+<script src="../script/check.js"></script>
 </body>
 </html>

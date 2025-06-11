@@ -272,7 +272,7 @@ a {
   text-decoration: solid;
 }
 
-#add{
+.add{
   border: 1px solid var(--border-claro);
   padding: 9px;
   color: var(--text);
@@ -281,4 +281,39 @@ a {
   white-space: normal;
   min-height: 60px;
   font-size: 16px;
+}
+
+#ck{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 30px;
+}
+
+.item-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    background: var(--fundo-secundario);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.item-check input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+.item-check label {
+    flex: 1;
+    cursor: pointer;
+}
+
+.item-check .remover {
+    background: none;
+    border: none;
+    color: var(--texto);
+    font-size: 1.2em;
+    cursor: pointer;
 }

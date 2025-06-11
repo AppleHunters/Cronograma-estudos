@@ -1,283 +1,255 @@
 @charset "UTF-8";
 
-
-/* VARIÁVEIS GLOBAIS */
+/* ===== VARIÁVEIS GLOBAIS ===== */
 :root {
-    /* Tema Escuro (padrão) */
-    --bg-escuro: #1E1E2F;
-    --text-escuro: #F1F1F1;
-    --accent-escuro: #5B6DFF;
-    --card-escuro: #2A2A40;
-    --border-escuro: #3A3A5A;
-    --port-escuro: #EA460A;
-    --mat-escuro: #0077FF;
-    --cien-escuro: #199700;
-    --hist-escuro: #7700FF;
-    --geo-escuro: #A3230C;
-    --ing-escuro: #FFBB00;
-    --cria-escuro: #303030;
+  /* Tema Escuro (padrão) */
+  --bg-escuro: #1E1E2F;
+  --text-escuro: #F1F1F1;
+  --accent-escuro: #5B6DFF;
+  --card-escuro: #2A2A40;
+  --border-escuro: #3A3A5A;
+  --port-escuro: #EA460A;
+  --mat-escuro: #0077FF;
+  --cien-escuro: #199700;
+  --hist-escuro: #7700FF;
+  --geo-escuro: #A3230C;
+  --ing-escuro: #FFBB00;
+  --cria-escuro: #444141;
+  --check-escuro: #1f8853;
 
-    /* Tema Claro */
-    --bg-claro: #f0f0f0;
-    --text-claro: #333333;
-    --accent-claro: #4A5BFF;
-    --card-claro: #ffffff;
-    --border-claro: #dddddd;
-    --port-claro: #A02000;
-    --mat-claro: #004EA1;
-    --cien-claro: #166600;
-    --hist-claro: #4B0099;
-    --geo-claro: #7B2C1B;
-    --ing-claro: #B88000;
-    --cria-escuro: #525252;
+  /* Tema Claro */
+  --bg-claro: #f0f0f0;
+  --text-claro: #333333;
+  --accent-claro: #4A5BFF;
+  --card-claro: #ffffff;
+  --border-claro: #dddddd;
+  --port-claro: #A02000;
+  --mat-claro: #004EA1;
+  --cien-claro: #166600;
+  --hist-claro: #4B0099;
+  --geo-claro: #7B2C1B;
+  --ing-claro: #B88000;
+  --cria-claro: #525252; /* Corrigido nome da variável */
+  --check-claro: #46926c;
 
-    /* Tema Sereno */
-    --bg-serene: #E8F4F8;
-    --text-serene: #2C3E50;
-    --accent-serene: #3498DB;
-    --card-serene: #FFFFFF;
-    --border-serene: #BDC3C7;
-    --port-serene: #E74C3C;
-    --mat-serene: #2980B9;
-    --cien-serene: #27AE60;
-    --hist-serene: #9B59B6;
-    --geo-serene: #E67E22;
-    --ing-serene: #F1C40F;
-    --cria-escuro:  #4c5153;
+  /* Tema Sereno */
+  --bg-serene: #E8F4F8;
+  --text-serene: #2C3E50;
+  --accent-serene: #3498DB;
+  --card-serene: #FFFFFF;
+  --border-serene: #BDC3C7;
+  --port-serene: #E74C3C;
+  --mat-serene: #2980B9;
+  --cien-serene: #27AE60;
+  --hist-serene: #9B59B6;
+  --geo-serene: #E67E22;
+  --ing-serene: #F1C40F;
+  --cria-serene: #4c5153; /* Corrigido nome da variável */
+  --check-serene: #6cc598;
 }
 
-/* RESET E PADRÕES */
+/* ===== RESET E PADRÕES ===== */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    transition: background-color 0.3s, color 0.3s;
-    overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  overflow-x: hidden;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
-/* APLICAÇÃO DOS TEMAS */
+/* ===== APLICAÇÃO DOS TEMAS ===== */
 body.tema-escuro {
-    --bg: var(--bg-escuro);
-    --text: var(--text-escuro);
-    --accent: var(--accent-escuro);
-    --card: var(--card-escuro);
-    --border: var(--border-escuro);
-    --port: var(--port-escuro);
-    --mat: var(--mat-escuro);
-    --cien: var(--cien-escuro);
-    --hist: var(--hist-escuro);
-    --geo: var(--geo-escuro);
-    --ing: var(--ing-escuro);
+  --bg: var(--bg-escuro);
+  --text: var(--text-escuro);
+  --accent: var(--accent-escuro);
+  --card: var(--card-escuro);
+  --border: var(--border-escuro);
+  --port: var(--port-escuro);
+  --mat: var(--mat-escuro);
+  --cien: var(--cien-escuro);
+  --hist: var(--hist-escuro);
+  --geo: var(--geo-escuro);
+  --ing: var(--ing-escuro);
+  --cria: var(--cria-escuro);
 }
 
 body.tema-claro {
-    --bg: var(--bg-claro);
-    --text: var(--text-claro);
-    --accent: var(--accent-claro);
-    --card: var(--card-claro);
-    --border: var(--border-claro);
-    --port: var(--port-claro);
-    --mat: var(--mat-claro);
-    --cien: var(--cien-claro);
-    --hist: var(--hist-claro);
-    --geo: var(--geo-claro);
-    --ing: var(--ing-claro);
+  --bg: var(--bg-claro);
+  --text: var(--text-claro);
+  --accent: var(--accent-claro);
+  --card: var(--card-claro);
+  --border: var(--border-claro);
+  --port: var(--port-claro);
+  --mat: var(--mat-claro);
+  --cien: var(--cien-claro);
+  --hist: var(--hist-claro);
+  --geo: var(--geo-claro);
+  --ing: var(--ing-claro);
+  --cria: var(--cria-claro);
 }
 
 body.tema-sereno {
-    --bg: var(--bg-serene);
-    --text: var(--text-serene);
-    --accent: var(--accent-serene);
-    --card: var(--card-serene);
-    --border: var(--border-serene);
-    --port: var(--port-serene);
-    --mat: var(--mat-serene);
-    --cien: var(--cien-serene);
-    --hist: var(--hist-serene);
-    --geo: var(--geo-serene);
-    --ing: var(--ing-serene);
+  --bg: var(--bg-serene);
+  --text: var(--text-serene);
+  --accent: var(--accent-serene);
+  --card: var(--card-serene);
+  --border: var(--border-serene);
+  --port: var(--port-serene);
+  --mat: var(--mat-serene);
+  --cien: var(--cien-serene);
+  --hist: var(--hist-serene);
+  --geo: var(--geo-serene);
+  --ing: var(--ing-serene);
+  --cria: var(--cria-serene);
 }
 
-/* ESTRUTURA PRINCIPAL */
-body {
-    background-color: var(--bg);
-    color: var(--text);
-}
-
+/* ===== ESTRUTURA PRINCIPAL ===== */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: var(--card);
-    color: var(--text);
-    position: relative;
-    z-index: 1100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--card);
+  color: var(--text);
+  position: relative;
+  z-index: 1100;
 }
 
 header .material-symbols-outlined {
-    font-size: 2.5em;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+  font-size: 2.5em;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 header .gamb {
-    color: transparent;
-    cursor: default;
+  color: transparent;
+  cursor: default;
 }
 
 #settings.rotated {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
-/* MENU LATERAL */
+/* ===== MENU LATERAL ===== */
 #menu {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 50%;
-    height: calc(100vh - 70px);
-    background-color: var(--card);
-    color: var(--text);
-    z-index: 1000;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    overflow-y: auto;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 50%;
+  height: calc(100vh - 70px);
+  background-color: var(--card);
+  color: var(--text);
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
 }
 
 #menu.menu-visible {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 #menu ul {
-    list-style-type: none;
-    padding: 20px;
+  list-style-type: none;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #menu li {
-    margin: 15px 0;
-    display: flex;
-    align-items: center;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
 }
 
 #menu svg {
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    margin-left: 10px;
-    opacity: 0.5;
-    transition: all 0.3s ease;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+  opacity: 0.5;
+  transition: all 0.3s ease;
 }
 
 #menu svg.active {
-    opacity: 1;
-    transform: scale(1.1);
+  opacity: 1;
+  transform: scale(1.1);
 }
 
-/* CONTEÚDO PRINCIPAL */
+/* ===== CONTEÚDO PRINCIPAL ===== */
 main {
-    background-color: var(--bg);
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    padding: 20px;
+  background-color: var(--bg);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 20px;
+  gap: 20px; /* Espaçamento entre blocos */
 }
 
-/* CONTEÚDO PRINCIPAL */
-main {
-    background-color: var(--bg);
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    padding: 20px;
-    gap: 20px; /* Adicionei esta linha para criar espaçamento entre os blocos */
-}
-
+/* ===== ASIDE (BLOCO DE CONTEÚDO) ===== */
 aside {
-    width: 75%;
-    padding: 20px;
-    background-color: var(--card);
-    text-align: center;
-    color: var(--text);
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-    margin-bottom: 0; /* Removi a margem superior que estava antes */
+  width: 75%;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--card);
+  text-align: center;
+  color: var(--text);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
 }
 
-aside {
-    width: 75%;
-    margin-top: 20px;
-    padding: 20px;
-    background-color: var(--card);
-    text-align: center;
-    color: var(--text);
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-}
-
-/* ASIDES TEMÁTICOS */
+/* Temas dos asides */
 aside.pt { box-shadow: 0 0 20px 5px var(--port); border: 1px solid var(--port); }
 aside.mt { box-shadow: 0 0 20px 5px var(--mat); border: 1px solid var(--mat); }
 aside.ci { box-shadow: 0 0 20px 5px var(--cien); border: 1px solid var(--cien); }
 aside.ht { box-shadow: 0 0 20px 5px var(--hist); border: 1px solid var(--hist); }
 aside.ge { box-shadow: 0 0 20px 5px var(--geo); border: 1px solid var(--geo); }
 aside.in { box-shadow: 0 0 20px 5px var(--ing); border: 1px solid var(--ing); }
-aside.cria { box-shadow: 0 0 20px 5px var(--cria-escuro); border: 1px solid var(--cria-escuro); }
+aside.cria { box-shadow: 0 0 20px 5px var(--cria); border: 1px solid var(--cria); }
+aside.check { box-shadow: 0 0 20px 5px var(--check-escuro); border: 1px solid var(--check-escuro); }
 
+/* Links dentro dos asides */
 aside a {
-    text-decoration: none;
-    color: var(--text);
+  display: block; /* Garante que o link ocupe todo o espaço */
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
 aside a p {
-    padding: 8px 16px;
-    border-radius: 8px;
-    background-color: transparent;
-    font-weight: bold;
-    transition: 0.3s;
-    display: none;
-    border: 2px solid currentColor;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: transparent;
+  font-weight: bold;
+  transition: 0.3s;
+  display: none;
+  border: 2px solid currentColor;
 }
 
+/* Cores específicas dos textos dos links */
 aside.pt a p { color: var(--port); border-color: var(--port); }
 aside.mt a p { color: var(--mat); border-color: var(--mat); }
 aside.ci a p { color: var(--cien); border-color: var(--cien); }
 aside.ht a p { color: var(--hist); border-color: var(--hist); }
 aside.ge a p { color: var(--geo); border-color: var(--geo); }
 aside.in a p { color: var(--ing); border-color: var(--ing); }
-aside.cria a p {color: var(--cria-escuro); border-color: var(--cria-escuro);}
+aside.cria a p { color: var(--cria); border-color: var(--cria); }
 
-/* Garante que os links sejam totalmente clicáveis */
-aside a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Garante que o menu use flexbox vertical */
-nav ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Estilo do item do menu */
+/* ===== MENU PERFIL ===== */
 .perfil-menu {
   display: flex;
   flex-direction: column;
@@ -285,7 +257,7 @@ nav ul {
   margin: 30px 0;
 }
 
-/* Círculo em volta do SVG */
+/* Círculo do ícone */
 .icone-wrapper {
   width: 100px;
   height: 100px;
@@ -297,19 +269,18 @@ nav ul {
   transition: transform 0.3s;
 }
 
-/* SVG dentro da bolinha */
-.icone-perfil {
-  width:  62%;
-  height: 62%;
-  stroke: white;
-}
-
-/* Zoom ao passar o mouse */
 .icone-wrapper:hover {
   transform: scale(1.1);
 }
 
-/* Texto 'Perfil' */
+/* SVG dentro do círculo */
+.icone-perfil {
+  width: 62%;
+  height: 62%;
+  stroke: white;
+}
+
+/* Texto do perfil */
 .perfil-menu p {
   margin-top: 10px;
   font-size: 18px;
@@ -317,31 +288,25 @@ nav ul {
   text-align: center;
 }
 
+/* ===== FOTO DE PERFIL ===== */
 #fotoPerfil {
+  position: relative;
   width: 100px;
   height: 100px;
   border-radius: 50%;
   background-size: cover;
   background-position: center;
-  cursor: pointer;
   background-color: #ccc; /* fallback */
-}
-
-#fotoPerfil {
-  position: relative; /* necessário se você quer colocar algo por cima */
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  background-color: #ccc;
+  cursor: pointer;
   overflow: hidden;
 }
 
-li a{
-    text-decoration: none;
+/* ===== LINKS LISTA ===== */
+li a {
+  text-decoration: none;
 }
 
+/* ===== FRASE MOTIVACIONAL ===== */
 .frase-motivacional {
   text-align: center;
   font-style: italic;
@@ -350,6 +315,6 @@ li a{
   padding: 15px;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.2);
-  color: var(--texto);
+  color: var(--text);
   backdrop-filter: blur(5px);
 }

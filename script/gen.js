@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const addBtn = document.getElementById('add');
+  const addBtn = document.querySelector('.add');
   const tabela = document.querySelector('.cronograma');
 
   // Criar cabeçalho (thead) fixo, se ainda não existir

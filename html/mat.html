@@ -79,12 +79,30 @@
         </table>
     </main>
     <footer>Feito Por <a href="https://github.com/AppleHunters">AppleHunters &copy;</a></footer>
-    <script>
-    // Aplica o tema IMEDIATAMENTE ao carregar
-    document.addEventListener('DOMContentLoaded', function() {
-        const temaSalvo = localStorage.getItem('tema') || 'escuro';
-        document.body.className = `tema-${temaSalvo} tema-transicao`;
-    });
-</script>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const temaSalvo = localStorage.getItem('tema') || 'escuro';
+            document.body.className = `tema-${temaSalvo} tema-transicao`;
+
+            const btnAdicionarNota = document.getElementById('addNota');
+            const main = document.querySelector('main');
+
+            btnAdicionarNota.addEventListener('click', () => {
+                const nota = document.createElement('div');
+                nota.className = 'bloco-nota';
+
+                nota.innerHTML = `
+                    <textarea placeholder="Escreva algo..."></textarea>
+                    <button class="fechar-nota">✖</button>
+                `;
+
+                nota.querySelector('.fechar-nota').addEventListener('click', () => {
+                    nota.remove();
+                });
+
+                main.appendChild(nota);
+            });
+        });
+    </script>
 </body>
 </html>
